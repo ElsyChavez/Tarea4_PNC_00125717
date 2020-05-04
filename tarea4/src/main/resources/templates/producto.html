@@ -1,1 +1,38 @@
-<! –– lets do this ––>
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tarea 4 PNC</title>
+</head>
+
+<body>
+
+	<h1>Ingreso de producto</h1>
+	
+	<form method="post" th:action="@{/guardar}" th:object="${producto}">
+	
+		<label for="nombres">Codigo del producto: </label>
+		<input type="text" name="codigoP" th:field="*{codigoP}">
+		<br>
+		<label for="nombres">Nombre del producto: </label>
+		<input type="text" name="nombreP" th:field="*{nombreP}">
+		<br>
+		<label for="apellidos">Marca del producto: </label>
+		<input type="text" name="marcaP" th:field="*{marcaP}">
+		<br>
+		<label for="fechaN">Descripcion: </label>
+		<input type="text" name="descripcion" th:field="*{descripcion}">
+		<br>
+		<label for="lugarN">Existencias: </label>
+		<input type="text" name="existencias" th:field="*{existencias}">
+		<br>
+		<label for="colegio">Fecha de ingreso (dd/mm/aaaa): </label>
+		<input type="text" name="fechaI" th:field="*{fechaI}">
+		<br>
+		<input type="submit" value="Guardar Producto">
+		
+	</form>
+	
+</body>
+</html>
